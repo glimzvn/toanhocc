@@ -15,8 +15,8 @@ body {
 }
 
 .logo {
-    height: 40px;
-    padding-right: 5px;
+    height: 70px;
+    padding-right: 10px;
 }
 
 /* --------- Game layout */
@@ -26,8 +26,8 @@ body {
     box-sizing: border-box;
     width: 85%;
     height: 65vh;
-    max-height: 450px;
-    max-width: 830px;
+    max-height: 650px;
+    max-width: 1030px;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
