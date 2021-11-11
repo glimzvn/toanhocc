@@ -21,21 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
     runGame("addition");
 });
 
-// The main game "loop", called when the script is first loaded
-// and after the user's answer has been processed
-
 function runGame(gameType) {
 
-    document.getElementById("answer-box").value = ""; // Erases the last typed answer
-    document.getElementById("answer-box").focus(); // Puts the cursor in the answer box
+    document.getElementById("answer-box").value = ""; 
+    document.getElementById("answer-box").focus();
 
-    // Creates two numbers with a value of between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
-
-    // Selects and displays the question depending on the gameType
-    // which we set when we called the function
-
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
     }
@@ -51,7 +43,6 @@ function runGame(gameType) {
 
 }
 
-// Called when the user clicks the Submit button or presses Enter
 
 function checkAnswer() {
 
@@ -60,11 +51,11 @@ function checkAnswer() {
     let isCorrect = userAnswer === calculatedAnswer[0]; // isCorrect has a true or false value
 
     if (isCorrect) {
-        alert("Hey! You got it right :D");
+        alert("Này! Bạn đã trả lời đúng rồi :D");
         incrementScore();
     }
     else {
-        alert(`Awww...you answered ${userAnswer}, the correct answer was ${calculatedAnswer[0]} :(`);
+        alert(`Awww ... Bạn đã trả lời là: ${userAnswer}, Đây mới là đáp án đúng: ${calculatedAnswer[0]} :<`);
         incrementWrongAnswer();
     }
 
