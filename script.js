@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    runGame("addition");
+    runGame("Cộng");
 });
 
 function runGame(gameType) {
@@ -28,13 +28,13 @@ function runGame(gameType) {
 
     let num1 = Math.floor(Math.random() * 50) + 1;
     let num2 = Math.floor(Math.random() * 50) + 1;
-    if (gameType === "addition") {
+    if (gameType === "Cộng") {
         displayAdditionQuestion(num1, num2);
     }
-    else if (gameType === "subtract") {
+    else if (gameType === "Trừ") {
         displaySubtractQuestion(num1, num2);
     }
-    else if (gameType === "multiply") {
+    else if (gameType === "Nhân") {
         displayMultiplyQuestion(num1, num2);
     } else {
         alert(`Unknown game type: ${gameType}`);
@@ -72,13 +72,13 @@ function calculateRightAnswer() {
     let operator = document.getElementById("operator").innerText;
 
     if (operator === "+") { // This is the addition game
-        return [operand1 + operand2, "addition"]; // return an array containing the correct answer and game type
+        return [operand1 + operand2, "Cộng"]; // return an array containing the correct answer and game type
     }
     else if (operator === "-") { // This is the subtraction game
-        return [operand1 - operand2, "subtract"]; // return an array containing the correct answer and game type
+        return [operand1 - operand2, "Trừ"]; // return an array containing the correct answer and game type
     }
     else if (operator === "x") { // This is the subtraction game
-        return [operand1 * operand2, "multiply"]; // return an array containing the correct answer and game type
+        return [operand1 * operand2, "Nhân"]; // return an array containing the correct answer and game type
     }
     else {
         alert(`Unimplemented operator: ${operator}`);
